@@ -22,7 +22,7 @@ const CartProducts = () => {
                     {cart?.map((product) => (<CartProduct key={product?.id} product={product}/>))}
                 </div>
             </section>
-            <CartSummery />
+            <CartSummery cart={cart}/>
           </div>
         </>
       ) : (
