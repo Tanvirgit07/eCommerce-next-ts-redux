@@ -1,7 +1,11 @@
 import React from 'react'
 import PriceFormate from '../PriceFormate'
+import { ProductType } from '../../../type'
+interface Props{
+  cart: ProductType[];
+}
 
-const CartSummery = () => {
+const CartSummery = ({cart}:Props) => {
   return (
     <div className='bg-gray-100 rounded-lg px-4 py-6 sm:p-10 lg:col-span-5 mt-10 lg:mt-0'>
       <p className='text-2xl'>Cart Summery</p>
