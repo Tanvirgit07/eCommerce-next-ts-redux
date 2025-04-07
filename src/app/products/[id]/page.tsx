@@ -6,7 +6,7 @@ import ProductPrice from "@/Components/ProductPrice";
 import { MdStar } from "react-icons/md";
 import { FaRegEye } from "react-icons/fa";
 import PriceFormate from "@/Components/PriceFormate";
-import AddToCart from "@/Components/AddToCart";
+import AddToCart from "@/Components/AddToCartButton";
 import Image from "next/image";
 
 interface Props {
@@ -65,7 +65,7 @@ const singleProduct = async ({ params }: Props) => {
           <FaRegEye className="mr-1 "/>
           <span className="font-semibold mr-1">250+</span>people are viewing this right now
         </p>
-        <p>You are saving <PriceFormate amount={product?.discountPercentage / 100}/> upon purchase</p>
+        <p>You are saving <PriceFormate amount={(product?.price * product?.discountPercentage) / 100}/> upon purchase</p>
         <div>
           <p className="text-sm tracking-wide">{product?.description}</p>
           <p className="text-base">{product?.warrantyInformation}</p>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 type Review = {
     rating: number;
     comment: string;
@@ -42,5 +43,15 @@ type Review = {
     meta: Meta;
     images: string[];
     thumbnail: string;
+    quantity?: number;
   };
+
+
+  export interface StateType {
+    shofy:{
+      cart: ProductType[];
+      favorite: ProductType[];
+      userInfo: any;
+    }
+  }
   
