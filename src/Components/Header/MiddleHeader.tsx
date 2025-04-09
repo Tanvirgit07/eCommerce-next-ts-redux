@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 import SearchInput from "./SearchInput";
 import Link from "next/link";
-import { LiaUser } from "react-icons/lia";
-import HeaderIcon from "./HeaderIcon";
 import MobileNavigation from "./MobileNavigation";
+import SignInPage from "../SignInPage";
+import HeaderIcon from "./HeaderIcon";
 
 function MiddleHeader() {
   return (
@@ -24,15 +24,7 @@ function MiddleHeader() {
         <SearchInput />
 
         <div className="hidden md:inline-flex items-center gap-3">
-            <Link href="/signin" className="flex items-center gap-2 text-sm">
-                <div className="border-2 border-gray-700 p-1.5 rounded-full">
-                    <LiaUser />
-                </div>
-                <div>
-                    <p className="text-xs">Hello, Guests</p>
-                    <p>Login / Register</p>
-                </div>
-            </Link>
+            <SignInPage />
             <HeaderIcon />
         </div>
         <MobileNavigation />
